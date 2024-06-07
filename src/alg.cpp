@@ -32,7 +32,8 @@ std::string infx2pstfx(std::string inf) {
             }
             stack.pop();
         } else {
-            while (!stack.isEmpty() && getPriority(c) <= getPriority(stack.peek())) {
+            while (!stack.isEmpty() &&
+                    getPriority(c) <= getPriority(stack.peek())) {
                 post += ' ';
                 post += stack.pop();
             }
