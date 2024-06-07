@@ -18,7 +18,7 @@ int getPriority(char ch) {
 }
 
 std::string infx2pstfx(std::string inf) {
-    TStack<char, 100> stack;
+    TStack<char> stack;
     std::string post;
     for (char c : inf) {
         if (std::isdigit(c)) {
@@ -48,7 +48,7 @@ std::string infx2pstfx(std::string inf) {
 }
 
 int eval(std::string post) {
-    TStack<int, 100> stack;
+    TStack<int> stack;
     int i = 0;
     while (i < post.length()) {
         if (post[i] == ' ') {
