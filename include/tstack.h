@@ -1,10 +1,11 @@
 // Copyright 2021 NNTU-CS
 #ifndef INCLUDE_TSTACK_H_
 #define INCLUDE_TSTACK_H_
+#include <stdexcept>
 
 template<typename T, int size>
 class TStack {
-public:
+ public:
     TStack() {
         data = new T[size];
         topIndex = -1;
@@ -36,7 +37,8 @@ public:
         }
         return data[topIndex];
     }
-private:
+
+ private:
     T *data;
     int topIndex;
 };
